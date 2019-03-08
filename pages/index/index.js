@@ -1,8 +1,4 @@
 //index.js
-import {
-  homeApi
-} from "../../common/api/homeApi.js"
-let Api = new homeApi()
 //获取应用实例
 const app = getApp()
 

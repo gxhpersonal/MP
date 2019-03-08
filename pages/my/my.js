@@ -1,8 +1,4 @@
 //my.js
-import {
-  homeApi
-} from "../../common/api/homeApi.js"
-let Api = new homeApi()
 //获取应用实例
 const app = getApp()
 
@@ -20,12 +16,6 @@ Page({
     })
   },
   onLoad: function () {
-    //test api
-    let data = {
-      cityId: wx.getStorageSync("cityId"),
-      activityId: wx.getStorageSync("activityId")
-    }
-    Api.homeData(data, (res) => { })
     //用户信息
     if (app.globalData.userInfo) {
       this.setData({
