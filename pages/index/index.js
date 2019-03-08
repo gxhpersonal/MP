@@ -4,8 +4,11 @@ const app = getApp()
 
 Page({
   data: {
+    comment:false,
     animationData:{},
     userInfo: {},
+    staList:5,
+    tapIndex:-1,
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     imgList: ['../../img/banner1.jpg',
@@ -60,5 +63,40 @@ Page({
       url: '/pages/login/login',
     })
     wx.hideLoading()
+  },
+  //下拉刷新
+  onPullDownRefresh() {
+    console.log('下拉了');
+  },
+  //上划加载
+  onReachBottom(){
+    console.log("到底了")
+  },
+  //评论
+  commentPop(){
+    this.setData({ comment: true}) 
+  },
+  closeComment(){
+    this.setData({ comment: false })
+  },
+  //点击星星
+  tapComment(e){
+    this.setData({
+      tapIndex:e.target.dataset.id
+    })
+  },
+  //提交评论
+  subComment(){
+    console.log(this)
+    if (this.data.tapIndex !== -1){
+      wx.showToast({
+        title: '评论成功',
+      })
+      this.setData({ comment: false })
+    }else{
+wx.showToast({
+  title: '请先评论',
+})
+    }
   }
 })

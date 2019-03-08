@@ -7,4 +7,13 @@
       <p class="S-tit" animation="{{animationData}}">景色宜人</p>
     </swiper-item>
   </swiper>
+  <button bindtap='commentPop'>评价</button>
+  <view class='comment-layer' wx:if="{{comment}}" bindtap='closeComment'></view>
+  <view class='comment-box' wx:if="{{comment}}">
+    <view class='c-item' wx:for="{{staList}}" wx:key="{{index}}" bindtap='tapComment'>
+      <image wx:if="{{index <= tapIndex}}" data-id="{{index}}" src="../../img/sta2.png"></image>
+      <image wx:if="{{index > tapIndex}}" data-id="{{index}}" src="../../img/sta.png"></image>
+    </view>
+    <button class='sub-btn' bindtap='subComment'>提交评论</button>
+  </view>
 </view>
