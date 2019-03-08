@@ -1,0 +1,52 @@
+<!--template/tip/tip.wxml-->
+<template name="tip1">
+    <view class="tip">
+        <view class="tip1-content tip-content">
+            <view class="cont-top">
+                <view class="img">
+                    <image src="../../imgs/tip-icon.png" />
+                </view>
+                <view>华夏家博会</view>
+                <view>价值20元入场门票</view>
+            </view>
+            <view class="cont-bottom">
+                <button class="btn">一键免费快递</button>
+                <view class="msg">
+                    <view class="time">展会时间：2018年10月1日 -3日</view>
+                    <view class="addr">展馆地址：上海世博展览馆</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>
+<template name="tip2">
+    <view class="tip">
+        <view class="tip2-content tip-content">
+            <view class="msg">您已经是我们的会员无需再次购买</view>
+            <button class="btn">查看我的门票</button>
+            <view class="close"><text class="iconfont   icon-chahao"></text></view>
+        </view>
+    </view>
+</template>
+<template name="tip3">
+    <view class="tip">
+        <view class="tip3-content tip-content">
+            <view class="title">退款说明</view>
+            <view class="msg">
+                24小时内将退款到您的支付账户，具体到账情况根据第三方支付为准。如遇非工作日，有可能顺延。
+            </view>
+            <view class="btn2">知道了</view>
+        </view>
+    </view>
+</template>
+<template name="tip4">
+    <view class="tip">
+        <view class="tip4-content tip-content">
+            <view class="title">是否切换账号</view>
+            <view class="btns">
+                <text class="cancle-btn cur">取消</text>
+                <text class="sure-btn">确定</text>
+            </view>
+        </view>
+    </view>
+</template>

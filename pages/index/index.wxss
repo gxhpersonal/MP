@@ -1,0 +1,17 @@
+/**index.wxss**/
+swiper-item{
+  position: relative;
+  color: #fff;
+}
+.F-tit{
+  position: absolute;
+  bottom: 60rpx;
+  left: 10rpx;
+  font-size: 40rpx;
+}
+.S-tit{
+  position: absolute;
+  bottom: 20rpx;
+  left: 10rpx;
+  font-size: 30rpx;
+}

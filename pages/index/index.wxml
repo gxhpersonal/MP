@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="container">
+  <swiper indicator-dots="true" indicator-color="red" autoplay="true" circular="true" bindchange="swiperChange">
+    <swiper-item wx:for="{{imgList}}" wx:key="index">
+      <image src='{{item}}'></image>
+      <p class="F-tit" animation="{{animationData}}">空气清新</p>
+      <p class="S-tit" animation="{{animationData}}">景色宜人</p>
+    </swiper-item>
+  </swiper>
+</view>
