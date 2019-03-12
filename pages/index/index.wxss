@@ -50,3 +50,10 @@ swiper-item{
 .sub-btn{
   width: 100%;
 }
+.charge{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15rpx;
+  color: #0fbc8b;
+  font-size: 24rpx;
+}

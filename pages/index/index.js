@@ -23,7 +23,14 @@ Page({
   },
 
   onLoad: function() {
-    
+    wx.getBatteryInfo({
+      success:res=>{
+        this.setData({
+          level: res.level,
+          isCharging: res.isCharging
+        })
+      }
+    })
   },
   onShow(){
     const animation = wx.createAnimation({
@@ -86,17 +93,17 @@ Page({
     })
   },
   //提交评论
-  subComment(){
+  subComment() {
     console.log(this)
-    if (this.data.tapIndex !== -1){
+    if (this.data.tapIndex !== -1) {
       wx.showToast({
         title: '评论成功',
       })
       this.setData({ comment: false })
-    }else{
-wx.showToast({
-  title: '请先评论',
-})
+    } else {
+      wx.showToast({
+        title: '请先评论',
+      })
     }
   }
 })

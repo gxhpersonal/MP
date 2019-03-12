@@ -1,5 +1,10 @@
 <!--index.wxml-->
 <view class="container">
+  <view class='charge'>
+    <view>剩余电量：{{level}}</view>
+    <view>{{isCharging?"正在充电":"未充电"}}
+  </view> 
+  </view>
   <swiper indicator-dots="true" indicator-color="red" autoplay="true" circular="true" bindchange="swiperChange">
     <swiper-item wx:for="{{imgList}}" wx:key="index">
       <image src='{{item}}'></image>
@@ -10,9 +15,9 @@
   <button bindtap='commentPop'>评价</button>
   <view class='comment-layer' wx:if="{{comment}}" bindtap='closeComment'></view>
   <view class='comment-box' wx:if="{{comment}}">
-    <view class='c-item' wx:for="{{staList}}" wx:key="{{index}}" bindtap='tapComment'>
-      <image wx:if="{{index <= tapIndex}}" data-id="{{index}}" src="../../img/sta2.png"></image>
-      <image wx:if="{{index > tapIndex}}" data-id="{{index}}" src="../../img/sta.png"></image>
+    <view class='c-item' wx:for="{{staList}}" wx:key="{{index}}">
+      <image wx:if="{{index <= tapIndex}}" data-id="{{index}}" src="../../img/sta2.png" bindtap='tapComment'></image>
+      <image wx:if="{{index > tapIndex}}" data-id="{{index}}" src="../../img/sta.png" bindtap='tapComment'></image>
     </view>
     <button class='sub-btn' bindtap='subComment'>提交评论</button>
   </view>
